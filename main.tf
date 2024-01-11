@@ -76,6 +76,7 @@ resource "google_bigquery_dataset" "testDataset" {
 resource "google_bigquery_table" "testTableRemoveIt" {
   dataset_id = google_bigquery_dataset.testDataset.dataset_id
   table_id   = var.table_id
+  deletion_protection=false
 
   time_partitioning {
     type = "DAY"
