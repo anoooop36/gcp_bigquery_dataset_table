@@ -16,12 +16,15 @@ provider "google" {
 
 
 variable "table_schema" {
+/*
   type = list(object({
     name = string
     type = string
     mode = string
     description = string
   }))
+*/
+  type = list(any)
   default =   [
     {
       "name": "permalink",
